@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suellen Rodrigues | Performance Feminina — Consultoria de Treino Online</title>
+  <meta name="description"
+    content="Consultoria online de treino feminino com Suellen Rodrigues. Glúteos, coxas, definição e postura com um método baseado na biomecânica feminina e ajustado à sua rotina real." />
+  <meta name="theme-color" content="#16131A" />
+  <meta property="og:title" content="Suellen Rodrigues | Performance Feminina" />
+  <meta property="og:description"
+    content="Treino planejado para o corpo da mulher: definição sem exageros, glúteos fortes e postura elegante. Consultoria online em todo o Brasil." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero-sullen.jpg" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            perola: '#FAF7F5',     // fundo claro principal
+            nude: '#F2EBE7',       // fundo claro alternado
+            chumbo: {
+              DEFAULT: '#16131A',  // fundo escuro premium
+              800: '#211D26',
+              700: '#2E2934'
+            },
+            rose: {
+              50: '#FBF2F2',
+              100: '#F4E2E3',
+              200: '#E8C6C9',
+              300: '#D9A3A9',
+              400: '#C9868E',
+              500: '#B56C76',      // rosé principal
+              600: '#99555F',
+              700: '#7A424B'
+            },
+            champ: {
+              200: '#EADBC2',
+              300: '#DCC49E',
+              400: '#C9A979'       // champanhe/dourado
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            suave: '0 10px 40px -12px rgba(22, 19, 26, 0.18)',
+            rose: '0 14px 34px -10px rgba(181, 108, 118, 0.55)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Gradientes da marca */
+    .grad-rose {
+      background-image: linear-gradient(135deg, #C9868E 0%, #B56C76 45%, #99555F 100%);
+    }
+
+    .grad-champ {
+      background-image: linear-gradient(135deg, #EADBC2 0%, #C9A979 100%);
+    }
+
+    .text-grad {
+      background: linear-gradient(120deg, #B56C76 0%, #C9A979 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .text-grad-claro {
+      background: linear-gradient(120deg, #E8C6C9 0%, #DCC49E 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Botão principal com brilho no hover */
+    .btn-primario {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primario::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, .35) 50%, transparent 80%);
+      transform: translateX(-120%);
+      transition: transform .7s ease;
+    }
+
+    .btn-primario:hover::after {
+      transform: translateX(120%);
+    }
+
+    /* FAQ */
+    details>summary {
+      list-style: none;
+    }
+
+    details>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details .faq-icone {
+      transition: transform .3s ease;
+    }
+
+    details[open] .faq-icone {
+      transform: rotate(45deg);
+    }
+
+    details[open] .faq-resposta {
+      animation: abrir .35s ease;
+    }
+
+    @keyframes abrir {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Pulso suave do botão flutuante */
+    @keyframes pulso {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, .45);
+      }
+
+      70% {
+        box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    .pulso {
+      animation: pulso 2.6s ease-out infinite;
+    }
+
+    /* Revelar ao rolar */
+    .revelar {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .revelar.visivel {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Placeholder elegante quando a imagem ainda não existe */
+    .foto-vazia {
+      background: linear-gradient(145deg, #F4E2E3 0%, #F2EBE7 55%, #EADBC2 100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .pulso,
+      details[open] .faq-resposta {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-perola font-sans text-chumbo antialiased">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="topo" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6"
+      aria-label="Navegação principal">
+      <a href="#inicio" class="flex shrink-0 items-center gap-3" aria-label="Suellen Rodrigues — voltar ao início">
+        <span
+          class="grad-rose flex h-11 w-11 items-center justify-center rounded-2xl font-display text-sm font-extrabold tracking-tight text-white shadow-rose">SR</span>
+        <span class="leading-tight">
+          <span class="block font-display text-[15px] font-extrabold tracking-[0.12em] text-chumbo">SUELLEN
+            RODRIGUES</span>
+          <span class="block text-[11px] font-medium uppercase tracking-[0.22em] text-rose-500">Performance
+            Feminina</span>
+        </span>
+      </a>
+
+      <ul class="hidden items-center gap-7 whitespace-nowrap text-sm font-medium text-chumbo/80 xl:flex">
+        <li><a href="#sobre" class="transition hover:text-rose-500">Sobre</a></li>
+        <li><a href="#resultados" class="transition hover:text-rose-500">Resultados</a></li>
+        <li><a href="#metodo" class="transition hover:text-rose-500">Como funciona</a></li>
+        <li><a href="#avaliacoes" class="transition hover:text-rose-500">Avaliações</a></li>
+        <li><a href="#planos" class="transition hover:text-rose-500">Planos</a></li>
+        <li><a href="#faq" class="transition hover:text-rose-500">Dúvidas</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20consultoria."
+          target="_blank" rel="noopener noreferrer"
+          class="btn-primario grad-rose hidden min-h-[48px] shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-6 text-sm font-semibold text-white shadow-rose transition hover:-translate-y-0.5 md:inline-flex">
+          Agendar Consultoria
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+          </svg>
+        </a>
+        <button id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile"
+          class="flex h-12 w-12 items-center justify-center rounded-2xl border border-chumbo/10 bg-white/70 text-chumbo xl:hidden">
+          <svg id="iconeMenu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10" />
+          </svg>
+          <svg id="iconeFechar" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="menuMobile" class="hidden border-t border-chumbo/5 bg-perola/95 backdrop-blur-xl xl:hidden">
+      <ul class="mx-auto flex max-w-7xl flex-col px-4 py-3 text-base font-medium sm:px-6">
+        <li><a href="#sobre" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Sobre</a></li>
+        <li><a href="#resultados" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Resultados</a>
+        </li>
+        <li><a href="#metodo" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Como funciona</a>
+        </li>
+        <li><a href="#para-quem" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Para quem é</a>
+        </li>
+        <li><a href="#avaliacoes" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Avaliações</a>
+        </li>
+        <li><a href="#planos" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Planos</a></li>
+        <li><a href="#faq" class="flex min-h-[48px] items-center rounded-xl px-3 hover:bg-rose-50">Dúvidas</a></li>
+      </ul>
+      <div class="mx-auto max-w-7xl px-4 pb-5 sm:px-6">
+        <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20consultoria."
+          target="_blank" rel="noopener noreferrer"
+          class="grad-rose flex min-h-[52px] items-center justify-center rounded-full font-semibold text-white shadow-rose">
+          Agendar Consultoria
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:pb-28">
+      <!-- brilhos de fundo -->
+      <div
+        class="pointer-events-none absolute -top-40 -right-40 h-[520px] w-[520px] rounded-full bg-rose-200/40 blur-3xl"
+        aria-hidden="true"></div>
+      <div
+        class="pointer-events-none absolute top-1/2 -left-48 h-[420px] w-[420px] rounded-full bg-champ-200/40 blur-3xl"
+        aria-hidden="true"></div>
+
+      <div
+        class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:gap-16">
+        <div class="text-center lg:text-left">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white/70 px-4 py-2 text-xs font-semibold text-rose-600 shadow-sm backdrop-blur sm:text-sm">
+            ✨ Método de Treino e Biomecânica Feminina
+          </span>
+
+          <h1
+            class="mt-6 font-display text-[2.35rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.6rem]">
+            O corpo forte e definido que você quer, com a <span class="text-grad">postura que você merece.</span>
+          </h1>
+
+          <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-chumbo/70 sm:text-lg lg:mx-0">
+            Glúteos e coxas mais fortes, definição sem exageros e uma postura elegante, com um treino planejado para
+            a biomecânica feminina e ajustado à sua rotina real. Nada de ficha genérica de academia.
+          </p>
+
+          <div class="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <a href="#planos"
+              class="btn-primario grad-rose inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full px-8 font-display font-bold text-white shadow-rose transition hover:-translate-y-0.5">
+              Garantir Minha Vaga
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+              </svg>
+            </a>
+            <a href="#resultados"
+              class="inline-flex min-h-[56px] items-center justify-center rounded-full border border-chumbo/15 bg-white/60 px-8 font-display font-bold backdrop-blur transition hover:border-rose-300 hover:text-rose-600">
+              Ver Resultados
+            </a>
+          </div>
+
+          <ul
+            class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-chumbo/60 lg:justify-start">
+            <li class="flex items-center gap-2"><span class="text-rose-500">●</span> Consultoria 100% online</li>
+            <li class="flex items-center gap-2"><span class="text-rose-500">●</span> Para todos os níveis</li>
+            <li class="flex items-center gap-2"><span class="text-rose-500">●</span> Atendimento em todo o Brasil</li>
+          </ul>
+        </div>
+
+        <!-- Moldura da foto -->
+        <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div
+            class="absolute -inset-3 rounded-[2.5rem] bg-gradient-to-br from-rose-200 via-white to-champ-200 opacity-80 blur-sm"
+            aria-hidden="true"></div>
+          <div
+            class="foto-vazia relative aspect-[4/5] overflow-hidden rounded-[2.25rem] border border-white shadow-suave">
+            <!-- Zoom centralizado na Suellen (remove a pessoa ao fundo, à direita) -->
+            <img src="hero-sullen.jpg" alt="Suellen Rodrigues, personal trainer especialista em treino feminino"
+              fetchpriority="high" class="h-full w-full object-cover"
+              style="transform: scale(1.6); transform-origin: 40% 38%;" onerror="this.remove()" />
+          </div>
+
+          <!-- Card flutuante (glass) -->
+          <div
+            class="absolute -bottom-6 left-4 right-4 flex items-center gap-4 rounded-3xl border border-white/60 bg-white/75 p-4 shadow-suave backdrop-blur-xl sm:left-auto sm:-left-8 sm:right-auto sm:w-72">
+            <span class="grad-champ flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-xl"
+              aria-hidden="true">🏆</span>
+            <span>
+              <span class="block font-display text-lg font-extrabold">+150 alunas</span>
+              <span class="block text-sm text-chumbo/60">transformadas com o método</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAIXA DE IMPACTO ===================== -->
+    <section aria-label="Números de impacto" class="bg-chumbo px-4 py-14 text-white sm:px-6">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden rounded-3xl bg-white/10 lg:grid-cols-4">
+        <div class="bg-chumbo px-4 py-8 text-center">
+          <p class="font-display text-4xl font-extrabold text-grad-claro sm:text-5xl">+150</p>
+          <p class="mt-2 text-sm text-white/65">alunas transformadas</p>
+        </div>
+        <div class="bg-chumbo px-4 py-8 text-center">
+          <p class="font-display text-4xl font-extrabold text-grad-claro sm:text-5xl">5,0★</p>
+          <p class="mt-2 text-sm text-white/65">satisfação das alunas</p>
+        </div>
+        <div class="bg-chumbo px-4 py-8 text-center">
+          <p class="font-display text-4xl font-extrabold text-grad-claro sm:text-5xl">100%</p>
+          <p class="mt-2 text-sm text-white/65">acompanhamento individual</p>
+        </div>
+        <div class="bg-chumbo px-4 py-8 text-center">
+          <p class="font-display text-4xl font-extrabold text-grad-claro sm:text-5xl">BR</p>
+          <p class="mt-2 text-sm text-white/65">alunas em todo o Brasil</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section id="sobre" class="py-20 sm:py-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div class="revelar relative mx-auto w-full max-w-md">
+          <div
+            class="foto-vazia relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[2.25rem] shadow-suave">
+            <span class="font-display text-7xl font-extrabold text-white/80" aria-hidden="true">SR</span>
+            <img src="foto-suellen.jpg" alt="Suellen Rodrigues acompanhando o treino de uma aluna" loading="lazy"
+              class="absolute inset-0 h-full w-full object-cover" onerror="this.remove()" />
+          </div>
+          <div
+            class="absolute -right-3 top-8 rounded-2xl border border-white/60 bg-white/80 px-5 py-4 shadow-suave backdrop-blur-xl sm:-right-8">
+            <p class="text-xs font-semibold uppercase tracking-widest text-rose-500">Especialidade</p>
+            <p class="font-display font-bold">Treino Feminino</p>
+          </div>
+        </div>
+
+        <div class="revelar">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Sobre a treinadora</p>
+          <h2
+            class="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-[2.75rem]">
+            Prazer, eu sou a Suellen. Meu trabalho é fazer você <span class="text-grad">confiar no próprio corpo.</span>
+          </h2>
+          <div class="mt-6 space-y-4 text-base leading-relaxed text-chumbo/75 sm:text-lg">
+            <p>
+              Sou personal trainer especialista em treino feminino. Depois de acompanhar dezenas de mulheres, percebi
+              que quase nenhuma falhava por falta de força de vontade, falhavam porque seguiam treinos feitos para
+              outro corpo, outra rotina e outro objetivo.
+            </p>
+            <p>
+              Por isso criei um método que parte da <strong class="text-chumbo">biomecânica feminina</strong>: como o
+              seu
+              quadril, sua coluna e seus músculos realmente trabalham. O resultado é um treino que constrói glúteos e
+              coxas,
+              define sem exageros e corrige a postura, com segurança e constância.
+            </p>
+          </div>
+
+          <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+            <li class="flex items-start gap-3 rounded-2xl border border-rose-100 bg-white p-4 shadow-sm">
+              <span class="mt-0.5 text-rose-500" aria-hidden="true">✦</span>
+              <span class="text-sm"><strong class="block font-display">Biomecânica feminina</strong>Exercícios
+                escolhidos para o seu corpo.</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-2xl border border-rose-100 bg-white p-4 shadow-sm">
+              <span class="mt-0.5 text-rose-500" aria-hidden="true">✦</span>
+              <span class="text-sm"><strong class="block font-display">Análise postural</strong>Menos dor, mais
+                alinhamento e elegância.</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-2xl border border-rose-100 bg-white p-4 shadow-sm">
+              <span class="mt-0.5 text-rose-500" aria-hidden="true">✦</span>
+              <span class="text-sm"><strong class="block font-display">Rotina real</strong>Treinos que cabem no seu
+                tempo.</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-2xl border border-rose-100 bg-white p-4 shadow-sm">
+              <span class="mt-0.5 text-rose-500" aria-hidden="true">✦</span>
+              <span class="text-sm"><strong class="block font-display">Acompanhamento próximo</strong>Ajustes contínuos
+                e suporte direto.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    <section id="resultados" class="bg-nude py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="revelar mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Resultados reais</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[2.75rem]">Mulheres
+            reais. Mudanças visíveis.</h2>
+          <p class="mt-4 text-chumbo/70">Transformações de alunas acompanhadas na consultoria online.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2">
+          <!-- Resultado 1 -->
+          <article
+            class="revelar group rounded-[2rem] border border-white bg-white/80 p-4 shadow-suave backdrop-blur transition duration-300 hover:-translate-y-1 sm:p-5">
+            <div class="grid grid-cols-2 gap-3">
+              <figure class="relative">
+                <div class="foto-vazia aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado1-antes.jpg" alt="Aluna 1 antes da consultoria" loading="lazy"
+                    class="h-full w-full object-cover" onerror="this.remove()" />
+                </div>
+                <figcaption
+                  class="absolute left-3 top-3 rounded-full bg-chumbo/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+                  Antes</figcaption>
+              </figure>
+              <figure class="relative">
+                <div class="foto-vazia aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado1-depois.jpg" alt="Aluna 1 depois da consultoria" loading="lazy"
+                    class="h-full w-full object-cover" onerror="this.remove()" />
+                </div>
+                <figcaption
+                  class="grad-rose absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold text-white">Depois
+                </figcaption>
+              </figure>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3 px-1">
+              <span class="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-600">5 meses de
+                consultoria</span>
+              <span class="text-sm text-chumbo/70"><strong class="text-chumbo">Meta:</strong> glúteos, coxas e
+                definição</span>
+            </div>
+          </article>
+
+          <!-- Resultado 2 -->
+          <article
+            class="revelar group rounded-[2rem] border border-white bg-white/80 p-4 shadow-suave backdrop-blur transition duration-300 hover:-translate-y-1 sm:p-5">
+            <div class="grid grid-cols-2 gap-3">
+              <figure class="relative">
+                <div class="foto-vazia aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado2-antes.jpg" alt="Aluna 2 antes da consultoria" loading="lazy"
+                    class="h-full w-full object-cover" onerror="this.remove()" />
+                </div>
+                <figcaption
+                  class="absolute left-3 top-3 rounded-full bg-chumbo/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+                  Antes</figcaption>
+              </figure>
+              <figure class="relative">
+                <div class="foto-vazia aspect-[3/4] overflow-hidden rounded-2xl">
+                  <img src="resultado2-depois.jpg" alt="Aluna 2 depois da consultoria" loading="lazy"
+                    class="h-full w-full object-cover" onerror="this.remove()" />
+                </div>
+                <figcaption
+                  class="grad-rose absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold text-white">Depois
+                </figcaption>
+              </figure>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3 px-1">
+              <span class="rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-600">6 meses de
+                consultoria</span>
+              <span class="text-sm text-chumbo/70"><strong class="text-chumbo">Meta:</strong> hipertrofia e
+                postura</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-chumbo/55">
+          Fotos publicadas com autorização das alunas. Resultados variam de pessoa para pessoa, de acordo com adesão ao
+          plano,
+          histórico individual e rotina.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section id="metodo" class="relative overflow-hidden bg-chumbo py-20 text-white sm:py-28">
+      <div
+        class="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[620px] -translate-x-1/2 rounded-full bg-rose-500/20 blur-3xl"
+        aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="revelar mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">Como funciona a consultoria</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[2.75rem]">3 passos
+            para sair do treino genérico</h2>
+          <p class="mt-4 text-white/65">Um processo simples, direto e 100% adaptado à sua rotina.</p>
+        </div>
+
+        <ol class="mt-14 grid gap-6 md:grid-cols-3">
+          <li
+            class="revelar rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-rose-300/40 hover:bg-white/[0.07]">
+            <span class="font-display text-5xl font-extrabold text-grad-claro">01</span>
+            <h3 class="mt-5 font-display text-xl font-bold">Anamnese e Análise Postural</h3>
+            <p class="mt-3 leading-relaxed text-white/65">Entendo seu histórico, objetivos, rotina, ciclo e possíveis
+              dores. Avalio sua postura para saber exatamente por onde começar.</p>
+          </li>
+          <li
+            class="revelar rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-rose-300/40 hover:bg-white/[0.07]">
+            <span class="font-display text-5xl font-extrabold text-grad-claro">02</span>
+            <h3 class="mt-5 font-display text-xl font-bold">Plano Customizado no App</h3>
+            <p class="mt-3 leading-relaxed text-white/65">Você recebe seu treino no aplicativo, com vídeos de execução,
+              séries e cargas pensadas para o seu corpo e o seu tempo.</p>
+          </li>
+          <li
+            class="revelar rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-rose-300/40 hover:bg-white/[0.07]">
+            <span class="font-display text-5xl font-extrabold text-grad-claro">03</span>
+            <h3 class="mt-5 font-display text-xl font-bold">Acompanhamento & Suporte Diário</h3>
+            <p class="mt-3 leading-relaxed text-white/65">Ajustes periódicos, correção de execução por vídeo e suporte
+              direto para você manter a constância até o resultado.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PARA QUEM É / NÃO É ===================== -->
+    <section id="para-quem" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="revelar mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Seja honesta com você</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[2.75rem]">Essa
+            consultoria é para você?</h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <div
+            class="revelar rounded-[2rem] border border-rose-200 bg-gradient-to-br from-white to-rose-50 p-8 shadow-suave sm:p-10">
+            <div class="flex items-center gap-3">
+              <span class="grad-rose flex h-11 w-11 items-center justify-center rounded-2xl text-white"
+                aria-hidden="true">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7" />
+                </svg>
+              </span>
+              <h3 class="font-display text-2xl font-extrabold">É para você se…</h3>
+            </div>
+            <ul class="mt-7 space-y-4 text-chumbo/80">
+              <li class="flex gap-3"><span class="mt-0.5 font-bold text-rose-500" aria-hidden="true">✓</span>Quer
+                glúteos e coxas mais fortes e um corpo definido, sem exageros.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold text-rose-500" aria-hidden="true">✓</span>Cansou de
+                treinos genéricos e não vê resultado há meses.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold text-rose-500" aria-hidden="true">✓</span>Tem uma
+                rotina corrida e precisa de um plano que caiba nela.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold text-rose-500" aria-hidden="true">✓</span>Sente dores
+                ou quer melhorar a postura com segurança.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold text-rose-500" aria-hidden="true">✓</span>Está
+                disposta a seguir o plano e dar feedback com constância.</li>
+            </ul>
+          </div>
+
+          <div class="revelar rounded-[2rem] border border-chumbo/10 bg-white p-8 sm:p-10">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-chumbo/5 text-chumbo/60"
+                aria-hidden="true">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" d="M6 6l12 12M18 6 6 18" />
+                </svg>
+              </span>
+              <h3 class="font-display text-2xl font-extrabold text-chumbo/80">Não é para você se…</h3>
+            </div>
+            <ul class="mt-7 space-y-4 text-chumbo/60">
+              <li class="flex gap-3"><span class="mt-0.5 font-bold" aria-hidden="true">✕</span>Busca uma fórmula
+                milagrosa ou resultado em poucos dias.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold" aria-hidden="true">✕</span>Quer apenas uma planilha
+                pronta, sem acompanhamento.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold" aria-hidden="true">✕</span>Não pretende se
+                comprometer com o processo.</li>
+              <li class="flex gap-3"><span class="mt-0.5 font-bold" aria-hidden="true">✕</span>Prefere copiar o treino
+                de influenciadoras a ter um plano seu.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVALIAÇÕES ===================== -->
+    <section id="avaliacoes" class="bg-nude py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="revelar mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Avaliações de alunas</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[2.75rem]">Quem
+            treina, recomenda</h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <figure
+            class="revelar flex flex-col rounded-[2rem] border border-white bg-white/85 p-7 shadow-suave backdrop-blur transition duration-300 hover:-translate-y-1">
+            <p class="text-lg tracking-[0.2em] text-champ-400" aria-label="Avaliação 5 de 5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-chumbo/80">
+              "Pela primeira vez consegui manter a constância. A Suellen montou um treino que cabe na minha rotina e
+              meus glúteos nunca estiveram tão bonitos!"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-chumbo/5 pt-5">
+              <span
+                class="grad-rose flex h-12 w-12 items-center justify-center rounded-full font-display font-bold text-white"
+                aria-hidden="true">CM</span>
+              <span><span class="block font-display font-bold">Camila Martins</span><span
+                  class="block text-sm text-chumbo/55">Advogada · 34 anos</span></span>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="revelar flex flex-col rounded-[2rem] border border-white bg-white/85 p-7 shadow-suave backdrop-blur transition duration-300 hover:-translate-y-1">
+            <p class="text-lg tracking-[0.2em] text-champ-400" aria-label="Avaliação 5 de 5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-chumbo/80">
+              "Eu sofria com dor nas costas e postura curvada. Hoje treino sem dor, estou mais forte e me sinto muito
+              mais confiante."
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-chumbo/5 pt-5">
+              <span
+                class="grad-champ flex h-12 w-12 items-center justify-center rounded-full font-display font-bold text-chumbo"
+                aria-hidden="true">JA</span>
+              <span><span class="block font-display font-bold">Juliana Alves</span><span
+                  class="block text-sm text-chumbo/55">Professora · 41 anos</span></span>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="revelar flex flex-col rounded-[2rem] border border-white bg-white/85 p-7 shadow-suave backdrop-blur transition duration-300 hover:-translate-y-1">
+            <p class="text-lg tracking-[0.2em] text-champ-400" aria-label="Avaliação 5 de 5 estrelas">★★★★★</p>
+            <blockquote class="mt-4 flex-1 leading-relaxed text-chumbo/80">
+              "Mãe de dois e sem tempo nenhum. Com os treinos da Suellen voltei a me reconhecer no espelho. Atenciosa e
+              muito profissional!"
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-chumbo/5 pt-5">
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-full bg-chumbo font-display font-bold text-white"
+                aria-hidden="true">PS</span>
+              <span><span class="block font-display font-bold">Patrícia Souza</span><span
+                  class="block text-sm text-chumbo/55">Empresária · 38 anos</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PLANOS ===================== -->
+    <section id="planos" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="revelar mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Planos e investimento</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[2.75rem]">Invista no
+            corpo que você vai ter por anos</h2>
+          <p class="mt-4 text-chumbo/70">Escolha seu plano e fale direto com a Suellen no WhatsApp para confirmar a vaga
+            e a forma de pagamento.</p>
+        </div>
+
+        <div class="mt-16 grid items-stretch gap-8 lg:grid-cols-3 lg:gap-6">
+          <!-- Mensal -->
+          <article
+            class="revelar flex flex-col rounded-[2rem] border border-chumbo/10 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-suave">
+            <h3 class="font-display text-xl font-bold">Mensal</h3>
+            <p class="mt-1 text-sm text-chumbo/60">Para começar e sentir o método.</p>
+            <p class="mt-6 flex items-end gap-1"><span class="font-display text-5xl font-extrabold">R$ 197</span><span
+                class="pb-1.5 text-chumbo/55">/mês</span></p>
+            <ul class="mt-8 flex-1 space-y-3.5 text-sm text-chumbo/80">
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Treino personalizado no app</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Anamnese completa</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Ajuste mensal do treino</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Suporte via WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Mensal%20(R%24%20197%2Fm%C3%AAs).%20Como%20fa%C3%A7o%20para%20come%C3%A7ar%3F"
+              target="_blank" rel="noopener noreferrer" aria-label="Contratar o Plano Mensal pelo WhatsApp"
+              class="mt-9 flex min-h-[52px] items-center justify-center rounded-full border-2 border-chumbo/80 font-display font-bold transition hover:bg-chumbo hover:text-white">
+              Quero o Mensal
+            </a>
+          </article>
+
+          <!-- Trimestral (destaque) -->
+          <article
+            class="revelar relative flex flex-col rounded-[2rem] bg-chumbo p-8 text-white shadow-2xl ring-1 ring-rose-300/30 transition duration-300 hover:-translate-y-1 lg:-my-6 lg:py-14">
+            <span
+              class="grad-champ absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-5 py-2 text-xs font-extrabold uppercase tracking-[0.15em] text-chumbo shadow-lg">
+              ★ Mais procurado
+            </span>
+            <h3 class="font-display text-xl font-bold">Trimestral</h3>
+            <p class="mt-1 text-sm text-white/60">Tempo ideal para ver a transformação.</p>
+            <p class="mt-6 flex items-end gap-1"><span class="font-display text-5xl font-extrabold text-grad-claro">R$
+                497</span><span class="pb-1.5 text-white/55">/3 meses</span></p>
+            <p class="mt-2 text-sm text-rose-200">≈ R$ 165/mês · economia de R$ 94</p>
+            <ul class="mt-8 flex-1 space-y-3.5 text-sm text-white/85">
+              <li class="flex gap-3"><span
+                  class="grad-rose flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  aria-hidden="true">✓</span>Treino personalizado no app</li>
+              <li class="flex gap-3"><span
+                  class="grad-rose flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  aria-hidden="true">✓</span>Anamnese + análise postural</li>
+              <li class="flex gap-3"><span
+                  class="grad-rose flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  aria-hidden="true">✓</span>Ajustes quinzenais</li>
+              <li class="flex gap-3"><span
+                  class="grad-rose flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  aria-hidden="true">✓</span>Correção de execução por vídeo</li>
+              <li class="flex gap-3"><span
+                  class="grad-rose flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                  aria-hidden="true">✓</span>Suporte prioritário no WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Trimestral%20(R%24%20497%2F3%20meses).%20Como%20fa%C3%A7o%20para%20come%C3%A7ar%3F"
+              target="_blank" rel="noopener noreferrer" aria-label="Contratar o Plano Trimestral pelo WhatsApp"
+              class="btn-primario grad-rose mt-9 flex min-h-[56px] items-center justify-center rounded-full font-display font-bold text-white shadow-rose transition hover:-translate-y-0.5">
+              Garantir Minha Vaga
+            </a>
+          </article>
+
+          <!-- Semestral -->
+          <article
+            class="revelar flex flex-col rounded-[2rem] border border-chumbo/10 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-suave">
+            <h3 class="font-display text-xl font-bold">Semestral</h3>
+            <p class="mt-1 text-sm text-chumbo/60">Para quem quer consolidar o resultado.</p>
+            <p class="mt-6 flex items-end gap-1"><span class="font-display text-5xl font-extrabold">R$ 897</span><span
+                class="pb-1.5 text-chumbo/55">/6 meses</span></p>
+            <p class="mt-2 text-sm font-medium text-rose-600">≈ R$ 150/mês · maior economia</p>
+            <ul class="mt-8 flex-1 space-y-3.5 text-sm text-chumbo/80">
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Tudo do plano Trimestral</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Ajustes semanais</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Reavaliação postural a cada 2 meses</li>
+              <li class="flex gap-3"><span
+                  class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-600"
+                  aria-hidden="true">✓</span>Relatório de evolução</li>
+            </ul>
+            <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20contratar%20o%20Plano%20Semestral%20(R%24%20897%2F6%20meses).%20Como%20fa%C3%A7o%20para%20come%C3%A7ar%3F"
+              target="_blank" rel="noopener noreferrer" aria-label="Contratar o Plano Semestral pelo WhatsApp"
+              class="mt-9 flex min-h-[52px] items-center justify-center rounded-full border-2 border-chumbo/80 font-display font-bold transition hover:bg-chumbo hover:text-white">
+              Quero o Semestral
+            </a>
+          </article>
+        </div>
+
+        <p class="mx-auto mt-12 max-w-2xl text-center text-sm text-chumbo/60">
+          🔒 Você fala direto com a Suellen pelo WhatsApp para confirmar disponibilidade, tirar dúvidas e combinar o
+          pagamento (PIX ou cartão).
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="bg-nude py-20 sm:py-28">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+        <div class="revelar text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-rose-500">Dúvidas frequentes</p>
+          <h2 class="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Ainda em dúvida? A gente
+            resolve.</h2>
+        </div>
+
+        <div class="mt-12 space-y-3">
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Sou iniciante. A consultoria funciona para mim?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Sim! O treino parte do seu nível atual,
+              com exercícios explicados em vídeo e progressão segura. Iniciantes costumam evoluir muito rápido com
+              orientação certa.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Preciso de academia ou equipamentos?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Não necessariamente. O plano é montado
+              com o que você tem: academia completa, condomínio ou casa com poucos acessórios. Definimos isso na
+              anamnese.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Minha rotina é corrida. Vou conseguir acompanhar?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Esse é justamente o foco do método. O
+              treino é ajustado aos dias e ao tempo que você realmente tem — seja 3 vezes por semana ou sessões de 40
+              minutos.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Vou ficar "masculinizada" treinando com peso?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Não. O treino de força é o que deixa o
+              corpo feminino firme, definido e com curvas. Tudo é ajustado ao resultado estético que você busca.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Tenho dores na coluna ou nos joelhos. Posso treinar?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Na anamnese avaliamos seu histórico e
+              postura para montar um treino seguro, com foco em fortalecimento. Em casos específicos, pode ser
+              necessária liberação médica.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Em quanto tempo vejo resultados?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Os primeiros sinais costumam aparecer
+              entre 4 e 8 semanas — mais disposição, força e postura. Mudanças visuais maiores dependem do objetivo, da
+              rotina e da adesão ao plano.</div>
+          </details>
+
+          <details
+            class="group rounded-3xl border border-white bg-white/85 shadow-sm backdrop-blur transition open:shadow-suave">
+            <summary
+              class="flex min-h-[64px] cursor-pointer items-center justify-between gap-4 px-6 py-4 font-display font-bold">
+              Quais são as formas de pagamento?
+              <span
+                class="faq-icone flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-50 text-xl text-rose-500"
+                aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-resposta px-6 pb-6 leading-relaxed text-chumbo/70">Ao escolher o plano, você fala direto com
+              a Suellen no WhatsApp e combina o pagamento (PIX ou cartão) e a data de início.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="px-4 py-20 sm:px-6 sm:py-24">
+      <div
+        class="revelar relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-chumbo px-6 py-14 text-center text-white sm:px-12 sm:py-16">
+        <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-rose-500/30 blur-3xl"
+          aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-champ-400/20 blur-3xl"
+          aria-hidden="true"></div>
+        <h2 class="relative font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Seu próximo treino pode ser
+          o primeiro <span class="text-grad-claro">do jeito certo.</span></h2>
+        <p class="relative mx-auto mt-4 max-w-xl text-white/70">As vagas de acompanhamento são limitadas para manter a
+          qualidade. Fale comigo e garanta a sua.</p>
+        <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Quero%20garantir%20minha%20vaga%20na%20consultoria."
+          target="_blank" rel="noopener noreferrer"
+          class="btn-primario grad-rose relative mt-8 inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full px-9 font-display font-bold text-white shadow-rose transition hover:-translate-y-0.5">
+          Falar com a Suellen no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-chumbo text-white/70">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-3">
+          <span
+            class="grad-rose flex h-11 w-11 items-center justify-center rounded-2xl font-display text-sm font-extrabold text-white"
+            aria-hidden="true">SR</span>
+          <span class="leading-tight">
+            <span class="block font-display text-[15px] font-extrabold tracking-[0.12em] text-white">SUELLEN
+              RODRIGUES</span>
+            <span class="block text-[11px] font-medium uppercase tracking-[0.22em] text-rose-300">Performance
+              Feminina</span>
+          </span>
+        </div>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed">Consultoria online de treino feminino, baseada na biomecânica
+          da mulher e na sua rotina real.</p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <p class="font-display font-bold text-white">Navegação</p>
+        <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          <li><a href="#sobre" class="transition hover:text-rose-300">Sobre</a></li>
+          <li><a href="#resultados" class="transition hover:text-rose-300">Resultados</a></li>
+          <li><a href="#metodo" class="transition hover:text-rose-300">Como funciona</a></li>
+          <li><a href="#avaliacoes" class="transition hover:text-rose-300">Avaliações</a></li>
+          <li><a href="#planos" class="transition hover:text-rose-300">Planos</a></li>
+          <li><a href="#faq" class="transition hover:text-rose-300">Dúvidas</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="font-display font-bold text-white">Contato</p>
+        <div class="mt-4 flex gap-3">
+          <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram da Suellen Rodrigues"
+            class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition hover:border-rose-300/50 hover:bg-rose-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.1a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.1-9.4a1.2 1.2 0 100 2.3 1.2 1.2 0 000-2.3z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer"
+            aria-label="WhatsApp da Suellen Rodrigues"
+            class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition hover:border-rose-300/50 hover:bg-rose-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zm0-21.6A11.8 11.8 0 001.8 18l-1.7 6 6.2-1.6A11.8 11.8 0 1012 .2z" />
+            </svg>
+          </a>
+        </div>
+        <p class="mt-4 text-sm">Atendimento online para todo o Brasil.</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <p class="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-white/45 sm:px-6">
+        © <span id="ano">2026</span> Suellen Rodrigues · Performance Feminina. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===================== BOTÃO FLUTUANTE WHATSAPP ===================== -->
+  <a href="https://wa.me/5561999999999?text=Ol%C3%A1%2C%20Suellen!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20a%20consultoria."
+    target="_blank" rel="noopener noreferrer" aria-label="Falar com a Suellen no WhatsApp"
+    class="pulso fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition hover:scale-110 sm:bottom-7 sm:right-7 sm:h-16 sm:w-16">
+    <svg class="h-7 w-7 sm:h-8 sm:w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zm0-21.6A11.8 11.8 0 001.8 18l-1.7 6 6.2-1.6A11.8 11.8 0 1012 .2z" />
+    </svg>
+  </a>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const menuMobile = document.getElementById('menuMobile');
+    const iconeMenu = document.getElementById('iconeMenu');
+    const iconeFechar = document.getElementById('iconeFechar');
+
+    function alternarMenu(abrir) {
+      menuMobile.classList.toggle('hidden', !abrir);
+      iconeMenu.classList.toggle('hidden', abrir);
+      iconeFechar.classList.toggle('hidden', !abrir);
+      menuBtn.setAttribute('aria-expanded', String(abrir));
+      menuBtn.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+    }
+    menuBtn.addEventListener('click', () => alternarMenu(menuMobile.classList.contains('hidden')));
+    menuMobile.querySelectorAll('a').forEach(link => link.addEventListener('click', () => alternarMenu(false)));
+
+    // Navbar com vidro ao rolar
+    const topo = document.getElementById('topo');
+    function atualizarTopo() {
+      const rolou = window.scrollY > 12;
+      topo.classList.toggle('bg-perola/80', rolou);
+      topo.classList.toggle('backdrop-blur-xl', rolou);
+      topo.classList.toggle('shadow-suave', rolou);
+    }
+    window.addEventListener('scroll', atualizarTopo, { passive: true });
+    atualizarTopo();
+
+    // FAQ: só uma pergunta aberta por vez
+    const perguntas = document.querySelectorAll('#faq details');
+    perguntas.forEach(item => item.addEventListener('toggle', () => {
+      if (item.open) perguntas.forEach(outra => { if (outra !== item) outra.open = false; });
+    }));
+
+    // Revelar seções ao rolar
+    const revelaveis = document.querySelectorAll('.revelar');
+    if ('IntersectionObserver' in window) {
+      const observador = new IntersectionObserver(entradas => {
+        entradas.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visivel'); observador.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revelaveis.forEach(el => observador.observe(el));
+    } else {
+      revelaveis.forEach(el => el.classList.add('visivel'));
+    }
+
+    // Ano automático
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
